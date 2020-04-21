@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using System.Collections; 
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 dir = target.position - transform.position;
+                Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
         if (Vector3.Distance(transform.position, target.position) <= 0.4f)
         {
