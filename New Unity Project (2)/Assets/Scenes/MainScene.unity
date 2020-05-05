@@ -1532,6 +1532,7 @@ GameObject:
   - component: {fileID: 212269545}
   - component: {fileID: 212269544}
   - component: {fileID: 212269546}
+  - component: {fileID: 212269547}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -1586,6 +1587,19 @@ MonoBehaviour:
     type: 3}
   missileLauncherPrefab: {fileID: 8444334464533795204, guid: 578d2faa9e53b1846841116b4d9f1826,
     type: 3}
+--- !u!114 &212269547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212269543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00989903cb6ba844bb9bf28d31de54c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &212537718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11307,7 +11321,7 @@ PrefabInstance:
     - target: {fileID: 8826403361745330447, guid: 3714daa502fc58f4b910dd0847b5543d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileLauncher
+      value: SelectMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 8826403361745330447, guid: 3714daa502fc58f4b910dd0847b5543d,
         type: 3}
@@ -12340,6 +12354,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762e0fa606499294dad94b76bcd004bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 1086963915001932387, guid: e49c5b9cd9c47224bb3c27639765b571,
+      type: 3}
+    cost: 100
+  missileLauncher:
+    prefab: {fileID: 8444334464533795204, guid: 578d2faa9e53b1846841116b4d9f1826,
+      type: 3}
+    cost: 250
 --- !u!1001 &1361025463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20069,7 +20091,7 @@ PrefabInstance:
     - target: {fileID: 8826403361745330447, guid: 3714daa502fc58f4b910dd0847b5543d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseStandardTurret
+      value: SelectStandardTurret
       objectReference: {fileID: 0}
     - target: {fileID: 8826403361745330447, guid: 3714daa502fc58f4b910dd0847b5543d,
         type: 3}
