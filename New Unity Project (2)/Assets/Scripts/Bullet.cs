@@ -8,9 +8,13 @@ public class Bullet : MonoBehaviour
     private Transform target;
 
     public float speed = 70f;
+
     public int damage = 50;
+
     public float explosionRadius = 0f;
+
     public GameObject impactEffect;
+
     public void Seek(Transform _target) {
         target = _target;
     }
@@ -32,7 +36,7 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame,Space.World);
-        transform.LookAt(target);
+        transform.LookAt(target); 
     }
 
     void HitTarget() {
@@ -42,46 +46,38 @@ public class Bullet : MonoBehaviour
         if (explosionRadius > 0f)
         {
             Explode();
-        } 
-        
-        else
-        
-        {
+        }
+        else {
             Damage(target);
         }
 
-       
         Destroy(gameObject);
     }
 
-    void Explode ()
-    {
-       Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
-
-        foreach (Collider collider in colliders )
+    void Explode() {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
+        foreach (Collider collider in colliders)
         {
-            if ( collider.tag == "Enemy")
+            if (collider.tag == "Enemy")
             {
                 Damage(collider.transform);
             }
         }
     }
 
-    void Damage (Transform enemy)
-    {
-        Enemy e = enemy.GetComponent<Enemy>();
+    void Damage(Transform enemy) {
+        Enemy e =  enemy.GetComponent<Enemy>();
 
-        if ( e != null)
-        {
-          e.TakeDamage(damage);
+        if (e != null) {
+            e.TakeDamage(damage);
         }
-       
+
     }
 
-    private void OnDrawGizmosSelected ()
+     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+        Gizmos.DrawWireSphere(transform.position,explosionRadius);
     }
 
 }

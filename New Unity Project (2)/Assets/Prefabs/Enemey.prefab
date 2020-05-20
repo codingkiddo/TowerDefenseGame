@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2691681476907760468}
   - component: {fileID: 2691681476907760469}
   - component: {fileID: 675020554288286851}
+  - component: {fileID: 114331003329958464}
   m_Layer: 0
   m_Name: Enemey
   m_TagString: Enemy
@@ -64,7 +65,8 @@ MeshRenderer:
     firstSubMesh: 0
     subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
+  m_ProbeAnchor: {fileID: 7242875953998008168, guid: 570238e7dd861ae4387d523658fbc624,
+    type: 3}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
@@ -104,8 +106,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d764d1847802649ae1f679740e7281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSpeed: 10
   speed: 10
   health: 100
-  value: 50
-  deathEffect: {fileID: 576001038058537786, guid: 4ec0326a363edd84faa0d3427dbde9e3,
-    type: 3}
+  worth: 50
+  deathEffect: {fileID: 100006, guid: e4704660d196fac40802911e12ac76f1, type: 3}
+--- !u!114 &114331003329958464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691681476907760426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7ac0233a9956049a1382b5fb977e66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

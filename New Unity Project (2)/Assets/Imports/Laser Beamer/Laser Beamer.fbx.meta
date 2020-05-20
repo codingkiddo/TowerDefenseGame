@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 26425dace520307439945d058f576811
+guid: 2c71fa6f32ee8824882fa40aa62a6dd5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -20,7 +20,32 @@ ModelImporter:
     3300002: Turret
     4300000: Stand
     4300002: Turret
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bolts
+    second: {fileID: 2100000, guid: 63a5737444ac1a6478561f1f1bcdd520, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main Turret
+    second: {fileID: 2100000, guid: fa45460609e59e640a17468385e50ef8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pipe
+    second: {fileID: 2100000, guid: b2f5ab95d4dc6cc429f20a8227bac28f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stand
+    second: {fileID: 2100000, guid: d0d840e1e93383b438be6395cc7a9986, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Turret Accent
+    second: {fileID: 2100000, guid: 9334068f6df027444bd9c95c275ae996, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -51,7 +76,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -97,7 +122,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
